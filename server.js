@@ -19,16 +19,19 @@ let getData = function(html){
 	d = new Date();
 	const $ = cheerio.load(html);	
 	$('table.results tr')
-	.each(function(i, elem){	
-		data.push({
-			date: d,
-			league: $(elem).children("td:nth-child(2)").text(),
-			game: $(elem).find('a').text(),
-			odds_1:	$(elem).children("td:nth-child(5)").text(),
-			odds_X: $(elem).children("td:nth-child(6)").text(),
-			odds_2: $(elem).children("td:nth-child(7)").text(),
-			tip: $(elem).children("td:nth-child(8)").text()
-		});		
+	.each(function(i, elem){
+		var game = $(elem).find('a').text();
+		if (game.length > 0) {
+			data.push({
+				date: d,
+				league: $(elem).children("td:nth-child(2)").text(),
+				game: game,
+				odds_1:	$(elem).children("td:nth-child(5)").text(),
+				odds_X: $(elem).children("td:nth-child(6)").text(),
+				odds_2: $(elem).children("td:nth-child(7)").text(),
+				tip: $(elem).children("td:nth-child(8)").text()
+			});			
+		}	
 	});
 	console.log(data);	
 }
