@@ -1,0 +1,25 @@
+{
+  "name": "selfprojects_scrap-betting-tips",
+  "version": "1.0.0",
+  "description": "Demo Web Scraping Using axios and cheerio to retrieve betting tips from https://www.bettingtips1x2.com/",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AustinOsti/SelfProjects_Scrap-Betting-Tips.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AustinOsti/SelfProjects_Scrap-Betting-Tips/issues"
+  },
+  "homepage": "https://github.com/AustinOsti/SelfProjects_Scrap-Betting-Tips#readme",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "cheerio": "^1.0.0-rc.2"
+  }
+}
